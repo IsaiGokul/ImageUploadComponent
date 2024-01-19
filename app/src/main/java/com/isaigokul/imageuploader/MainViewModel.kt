@@ -21,9 +21,11 @@ import java.io.File
 
 class MainViewModel : ViewModel() {
     val uploadLiveData: MutableLiveData<ImageResponse> = MutableLiveData()
+    val loadingLiveData: MutableLiveData<Boolean> = MutableLiveData()
     val errorLiveData: MutableLiveData<Boolean> = MutableLiveData()
 
     fun upload(uri: Uri, selectedFile: File) {
+        loadingLiveData.postValue(true)
         //image upload api call using retrofit
         viewModelScope.launch {
             val filePart= withContext(Dispatchers.IO) {

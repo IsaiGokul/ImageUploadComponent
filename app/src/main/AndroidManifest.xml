@@ -19,8 +19,8 @@
         android:usesCleartextTraffic="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Imageuploader"
-        tools:targetApi="31">
+        android:theme="@style/Base.Theme.Imageuploader"
+        tools:targetApi="s">
         <activity
             android:name=".MainActivity"
             android:exported="true"
