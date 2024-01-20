@@ -54,7 +54,7 @@ class MainViewModel : ViewModel() {
 
                 override fun onFailure(call: Call<ImageResponse>, t: Throwable) {
                     // Handle failure
-                    Log.v("imageService upload", "error")
+                    Log.v("imageService upload", "error${t.localizedMessage}---${t.message}")
                     errorLiveData.postValue(false)
                 }
             })
